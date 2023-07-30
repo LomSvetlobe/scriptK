@@ -19,15 +19,15 @@ if platform.system() == "Windows":
     )
  
     # Windows also needs poppler_exe
-    path_to_poppler_exe = Path(r"C:\.....")
+    path_to_poppler_exe = (r"C:\Users\luka_\Desktop\Python\scriptK\poppler-23.07.0\Library\bin")
      
     # Put our output files in a sane place...
-    out_directory = Path(r"~\Desktop").expanduser()
+    out_directory = Path(r"C:\Users\luka_\Desktop\Python\scriptK\OCRoutput").expanduser()
 else:
     out_directory = Path("~").expanduser()    
  
 # Path of the Input pdf
-PDF_file = Path(r"d.pdf")
+PDF_file = Path(r"C:\Users\luka_\Desktop\Python\scriptK\thermo-tek_bd_050_wbs.pdf")
  
 # Store all the pages of the PDF in a variable
 image_file_list = []
@@ -52,7 +52,7 @@ def main():
         # Read in the PDF file at 500 DPI
  
         # Iterate through all the pages stored above
-        for page_enumeration, page in enumerate(pdf_pages, start=1):
+        for page_enumeration, page in enumerate(pdf_pages, start=2):
             # enumerate() "counts" the pages for us.
  
             # Create a file name to store the image
